@@ -45,8 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       ip: "192.168.109.2",
                       mac: "0800272d6012",
                       virtualbox__intnet: "rot",
-                      auto_config: false,
-                      hostsupdater: "skip"
+                      auto_config: false
     pc1.vm.hostname = "pc1"
     pc1.vm.provider "virtualbox" do |vb|
       vb.name = "pc1"
@@ -60,8 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       ip: "192.168.109.3",
                       mac: "0800272d6022",
                       virtualbox__intnet: "rot",
-                      auto_config: false,
-                      hostsupdater: "skip"
+                      auto_config: false
     pc2.vm.hostname = "pc2"
     pc2.vm.provider "virtualbox" do |vb|
       vb.name = "pc2"
@@ -73,8 +71,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       ip: "192.168.109.4",
                       mac: "0800272d6032",
                       virtualbox__intnet: "rot",
-                      auto_config: false,
-                      hostsupdater: "skip"
+                      auto_config: false
     pc3.vm.hostname = "pc3"
     pc3.vm.provider "virtualbox" do |vb|
       vb.name = "pc3"
@@ -86,8 +83,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       ip: "192.168.109.5",
                       mac: "0800272d6042",
                       virtualbox__intnet: "rot",
-                      auto_config: false,
-                      hostsupdater: "skip"
+                      auto_config: false
     pc4.vm.hostname = "pc4"
     pc4.vm.provider "virtualbox" do |vb|
       vb.name = "pc4"
