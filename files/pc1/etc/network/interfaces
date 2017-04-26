@@ -1,0 +1,32 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto enp0s3
+iface enp0s3 inet dhcp
+
+auto enp0s8
+iface enp0s8 inet static
+	address 192.168.56.69
+	netmask 255.255.255.0
+
+auto enp0s9
+iface enp0s9 inet static
+	address 192.168.109.2
+	netmask 255.255.255.0
+
+# We need to disable enp0s3, see GH-2648
+post-up route del default dev enp0s3 || true
+#post-up dhclient $IFACE
+up ip route add default via 192.168.56.1
+up /sbin/iptables -F
+up /sbin/iptables -t nat -F
+up /sbin/iptables -t nat -A POSTROUTING -o enp0s8 -j MASQUERADE
+up /sbin/sysctl -w net.ipv4.ip_forward=1
+#pre-down route add default dev enp0s3

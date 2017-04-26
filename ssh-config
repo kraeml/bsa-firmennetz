@@ -1,0 +1,8 @@
+Host PC1
+	HostName 192.168.56.69
+	User vagrant
+	StrictHostKeyChecking no
+	UserKnownHostsFile /dev/null
+	IdentityFile .vagrant/machines/pc1/virtualbox/private_key
+  PubkeyAuthentication yes
+  PasswordAuthentication no

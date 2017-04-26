@@ -42,7 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       ip: "192.168.56.69",
                       auto_config: false
     pc1.vm.network :private_network,
-                      ip: "192.168.109.1",
+                      ip: "192.168.109.2",
                       mac: "0800272d6012",
                       virtualbox__intnet: "rot",
                       auto_config: false,
@@ -57,7 +57,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "pc2" do |pc2|
     pc2.vm.network :private_network,
-                      ip: "192.168.109.2",
+                      ip: "192.168.109.3",
                       mac: "0800272d6022",
                       virtualbox__intnet: "rot",
                       auto_config: false,
@@ -70,7 +70,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define "pc3" do |pc3|
     pc3.vm.network :private_network,
-                      ip: "192.168.109.3",
+                      ip: "192.168.109.4",
                       mac: "0800272d6032",
                       virtualbox__intnet: "rot",
                       auto_config: false,
@@ -83,7 +83,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define "pc4" do |pc4|
     pc4.vm.network :private_network,
-                      ip: "192.168.109.4",
+                      ip: "192.168.109.5",
                       mac: "0800272d6042",
                       virtualbox__intnet: "rot",
                       auto_config: false,
