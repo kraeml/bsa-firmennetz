@@ -39,14 +39,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "pc1" do |pc1|
     pc1.vm.network :public_network,
                       bridge: ["enp3s0","eth0"],
-                      ip: "192.168.56.69",
-                      auto_config: false
+                      ip: "192.168.56.69"
     pc1.vm.network :private_network,
                       ip: "192.168.109.2",
                       mac: "0800272d6012",
                       virtualbox__intnet: "rot",
                       auto_config: false
-    pc1.vm.hostname = "pc1"
+    #pc1.vm.hostname = "pc1"
     pc1.vm.provider "virtualbox" do |vb|
       vb.name = "pc1"
     end
@@ -60,7 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       mac: "0800272d6022",
                       virtualbox__intnet: "rot",
                       auto_config: false
-    pc2.vm.hostname = "pc2"
+    #pc2.vm.hostname = "pc2"
     pc2.vm.provider "virtualbox" do |vb|
       vb.name = "pc2"
     end
@@ -72,7 +71,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       mac: "0800272d6032",
                       virtualbox__intnet: "rot",
                       auto_config: false
-    pc3.vm.hostname = "pc3"
+    #pc3.vm.hostname = "pc3"
     pc3.vm.provider "virtualbox" do |vb|
       vb.name = "pc3"
     end
@@ -84,7 +83,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                       mac: "0800272d6042",
                       virtualbox__intnet: "rot",
                       auto_config: false
-    pc4.vm.hostname = "pc4"
+    #pc4.vm.hostname = "pc4"
     pc4.vm.provider "virtualbox" do |vb|
       vb.name = "pc4"
     end
